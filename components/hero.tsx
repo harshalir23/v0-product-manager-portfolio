@@ -58,26 +58,26 @@ export default function Hero() {
 
       {/* Hero Section */}
       <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           <div className="space-y-6 sm:space-y-8 order-2 md:order-1">
-            <div className="space-y-3 sm:space-y-4">
-              <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
                 <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   Creating value
                 </span>
                 <span className="block text-foreground text-3xl sm:text-4xl md:text-5xl">where tech meet users.</span>
               </h2>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                 Product Manager · FMS Delhi · NIT Warangal
               </p>
             </div>
-            <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed max-w-lg">
               A B2B SaaS Product Manager who thrives at the intersection of strategy, design, and engineering. Driving
               enterprise collaboration at JioMeet with AI-powered, API-first products that scale.
             </p>
           </div>
           <div className="relative order-1 md:order-2">
-            <div className="w-full md:w-96 aspect-square md:aspect-auto md:h-96 bg-gradient-to-br from-muted to-card rounded-xl sm:rounded-2xl overflow-hidden">
+            <div className="aspect-square bg-gradient-to-br from-muted to-card rounded-xl sm:rounded-2xl overflow-hidden">
               <img
                 src="/professional-product-manager-portrait.jpg"
                 alt="Harshali Rane"
