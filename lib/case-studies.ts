@@ -1,5 +1,40 @@
 export const caseStudiesData = [
   {
+    slug: "cpaas-live-streaming",
+    title: "Optimized Live Streaming for cPaaS",
+    image: "/case-study-live-streaming.jpg",
+    overview:
+      "Accelerated revenue growth by delivering a live streaming solution on the cPaaS platform within 3 weeks for a major edtech client.",
+    tags: ["LiveStreaming", "cPaaS", "EdTech"],
+    sectionImages: [
+      "/ai-workflow-diagram-with-ai--data-recording--actio.jpg",
+      "/problem-space-diagram-showing-meetings-to-data-to-.jpg",
+      "/meeting-recap-interface-showing-key-takeaways-and-.jpg",
+    ],
+    sections: [
+      {
+        title: "Context",
+        content:
+          "A major edtech platform required a robust live streaming capability to power interactive online learning at scale. Time was critical—the client needed a fully functional solution within 3 weeks to launch their new course offering.",
+      },
+      {
+        title: "Problem Space",
+        content:
+          "The edtech client faced a tight deadline to enable live streaming for thousands of concurrent students. Building from scratch would have taken months. They needed a production-ready solution that could handle high-scale concurrent streaming, adaptive bitrate delivery, and low-latency interaction.",
+      },
+      {
+        title: "My Role & Approach",
+        content:
+          "I led the rapid product development and launch strategy, working across teams to integrate live streaming capabilities into the cPaaS platform within the aggressive 3-week timeline. Key priorities were reliability, scalability, and seamless integration.",
+      },
+      {
+        title: "Outcomes",
+        outcome:
+          "Delivered a fully functional live streaming solution that enabled the client to launch on schedule. The platform successfully handled peak concurrent viewership and became a key revenue driver for the edtech partnership.",
+      },
+    ],
+  },
+  {
     slug: "jiomeet-meeting-recap",
     title: "JioMeet: AI-Powered Meeting Recap",
     image: "/case-study-jiomeet-recap.jpg",
