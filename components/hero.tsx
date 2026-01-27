@@ -17,7 +17,7 @@ export default function Hero() {
     <>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div className="px-6 sm:px-12 md:px-16 lg:px-24 py-3 sm:py-4 flex items-center justify-between">
           <h1 className="text-xl sm:text-2xl font-serif font-bold tracking-tight">Harshali Rane</h1>
           <div className="flex gap-4 sm:gap-8">
             <button
@@ -57,32 +57,40 @@ export default function Hero() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-          <div className="space-y-6 sm:space-y-8 order-2 md:order-1">
-            <div className="space-y-4 sm:space-y-6">
-              <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
-                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Creating value
-                </span>
-                <span className="block text-foreground text-3xl sm:text-4xl md:text-5xl">where tech meet users.</span>
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                Product Manager · FMS Delhi · NIT Warangal
-              </p>
+      <section id="home" className="px-6 sm:px-12 md:px-16 lg:px-24 py-12 sm:py-16 md:py-32">
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl w-full">
+            <div className="flex flex-col justify-between order-2 md:order-1 h-auto gap-12 sm:gap-16">
+              <div className="space-y-6 sm:space-y-8">
+                <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
+                  <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Creating value
+                  </span>
+                  <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl">where tech meet users.</span>
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-tight pt-3 sm:pt-4">
+                  Product Manager · FMS Delhi · NIT Warangal
+                </p>
+              </div>
+              <div className="space-y-1.5 sm:space-y-2">
+                <p className="text-sm sm:text-base md:text-lg text-foreground leading-snug text-justify">
+                  B2B SaaS Product Manager building enterprise collaboration and cPaaS platforms. Led AI-powered, API-first products at scale; spanning real-time communication, AI powered, and industry-specific enterprise solutions & driving measurable gains in adoption, engagement, and revenue.
+                </p>
+                <p className="text-sm sm:text-base md:text-lg text-foreground leading-snug text-justify">
+                  Started as a Software Engineer, building scalable platforms and automation frameworks for large-scale systems. Strong foundation in APIs, data pipelines, and ML-assisted automation enables me to design products that are technically sound, execution-ready, and scalable from day one.
+                </p>
+              </div>
             </div>
-            <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed max-w-lg">
-              A B2B SaaS Product Manager who thrives at the intersection of strategy, design, and engineering. Driving
-              enterprise collaboration at JioMeet with AI-powered, API-first products that scale.
-            </p>
-          </div>
-          <div className="relative order-1 md:order-2">
-            <div className="aspect-square bg-gradient-to-br from-muted to-card rounded-xl sm:rounded-2xl overflow-hidden">
-              <img
-                src="/professional-product-manager-portrait.jpg"
-                alt="Harshali Rane"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative order-1 md:order-2 flex justify-center md:justify-end px-4 md:px-6">
+              <div className="w-96 md:w-[28rem] h-auto">
+                <div className="aspect-square bg-gradient-to-br from-muted to-card rounded-xl sm:rounded-2xl overflow-hidden">
+                  <img
+                    src="/professional-product-manager-portrait.jpg"
+                    alt="Harshali Rane"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
