@@ -16,36 +16,31 @@ export const caseStudiesData = [
           "The client was a large EdTech platform where live classes and recorded sessions directly drove revenue. Instructor adoption, student retention, and margins all depended on consistent live quality, reliable recordings, and cost efficiency at scale. Their platform was powered by our CPaaS solution for live video delivery, session recording, and analytics, making media infrastructure not just a technical concern, but a core business lever.",
       },
       {
-        title: "Problem Space",
+        title: "Problem",
         content:
           "As usage scaled, the existing media architecture began to show cracks. Live streams were encoded for delivery, then decoded and re-encoded again for recording and playback. This double-encoding pipeline created a compounding set of issues.",
         bullets: [
-          "Infrastructure costs rose linearly with class volume due to heavy CPU and GPU usage",
-          "Operational complexity increased with separate pipelines for live and recorded content, leading to higher failure rates during peak teaching hours",
-          "Recording delays and failures disrupted post-class consumption—one of the platform's key paid features",
+          "Infrastructure costs rose linearly with class volume due to heavy CPU and GPU usage.",
+          "Operational complexity increased with separate pipelines for live and recorded content, leading to higher failure rates during peak teaching hours.",
+          "Most critically, recording delays and failures disrupted post-class consumption—one of the platform's key paid features.",
         ],
       },
       {
         title: "Role & Approach",
         content:
           "I led the effort to re-architect the streaming pipeline with a focus on cost efficiency, reliability, and simplicity. Working with media and platform teams, we challenged the assumption that live delivery and recording required separate pipelines and explored a unified model.",
-        subsections: [
-          {
-            title: "Strategic Redesign",
-            content:
-              "We transitioned to an HLS-based delivery and recording architecture within our CPaaS offering. Live streams were packaged directly into HLS segments, which were simultaneously served to learners in real time and persisted as recordings. This eliminated decode-re-encode cycles entirely, unifying live and recorded workflows into a single pipeline.",
-          },
-          {
-            title: "Enhanced Visibility & Control",
-            content:
-              "To support enterprise operations, we enhanced the CPaaS dashboard with real-time session health, stream status, recording availability, completion indicators, and cost insights—giving the client full visibility into a revenue-critical system.",
-          },
+        bullets: [
+          "We transitioned to an HLS-based delivery and recording architecture within our CPaaS offering. Live streams were packaged directly into HLS segments, which were simultaneously served to learners in real time and persisted as recordings. This eliminated decode-re-encode cycles entirely, unifying live and recorded workflows into a single pipeline.",
+          "To support enterprise operations, we enhanced the CPaaS dashboard with real-time session health, stream status, recording availability, completion indicators, and cost insights—giving the client full visibility into a revenue-critical system.",
         ],
       },
       {
-        title: "Outcomes",
-        outcome:
-          "Significant reduction in infrastructure costs by removing redundant encoding. Improved recording reliability and higher post-class content consumption. Strengthened CPaaS value for high-revenue customers.",
+        title: "Outcome",
+        bullets: [
+          "Significant reduction in infrastructure costs by removing redundant encoding",
+          "Improved recording reliability and higher post-class content consumption",
+          "Strengthened CPaaS value for high-revenue customers",
+        ],
       },
     ],
   },
