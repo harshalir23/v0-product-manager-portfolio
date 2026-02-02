@@ -101,7 +101,7 @@ export const caseStudiesData = [
       {
         title: "Background",
         content:
-          "JioMeet Enterprise is a video conferencing platform built for chat-first collaboration within the JioWorkspace suite. As the product evolved, focus areas included usability, meeting reliability, and deeper integration across enterprise workflows. As the Product Manager for the in-meeting experience, I worked closely with Media and AI teams to improve call stability, video quality, and post-meeting value.",
+          "As JioMeet scaled across enterprise teams, meetings became harder to revisit. Long recordings and transcripts saw low engagement, while AI text summaries worked well for quick skims. However, users needed a faster, visual layer for context and tone. Video summaries complemented text by enabling instant recall without replaying full meetings.",
       },
       {
         title: "Problem",
