@@ -27,8 +27,8 @@ export default function Portfolio() {
                   </h3>
                   <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed text-justify">{study.overview}</p>
                   
-                  {/* Know More Button - Only for first case study when not expanded */}
-                  {idx === 0 && expandedIndex !== idx && (
+                  {/* Know More Button when not expanded */}
+                  {expandedIndex !== idx && (
                     <button
                       onClick={() => setExpandedIndex(idx)}
                       className="mt-2 px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
@@ -37,44 +37,43 @@ export default function Portfolio() {
                     </button>
                   )}
 
-                  {/* Expanded Content - Only for first case study */}
-                  {expandedIndex === idx && idx === 0 && (
-                    <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 pt-4">
-                      {/* Problem Section */}
-                      <div className="space-y-2">
-                        <h4 className="text-base sm:text-lg font-bold text-foreground">Problem</h4>
-                        <p className="text-sm sm:text-base text-foreground leading-relaxed text-justify">
-                          Enterprise teams using JioMeet struggled to recall outcomes from meetings. Key decisions were buried across long recordings, inaccurate transcripts, and cluttered chat threads. Although JioMeet had rich data (audio, transcripts, attendance), users lacked a clear, actionable summary. An AI-based meeting recap was on the roadmap, but poor transcription quality made it unusable.
-                        </p>
-                        <ul className="list-disc list-inside space-y-1 text-sm sm:text-base text-foreground">
-                          <li>Multiple recordings and raw transcripts overwhelmed users</li>
-                          <li>Low transcription accuracy due to background noise and speaker misidentification</li>
-                          <li>Teams couldn't easily search, recall, or act on meeting outcomes, reducing post-meeting engagement</li>
-                        </ul>
-                      </div>
+                  {/* Expanded Content - Dynamically rendered from case study data */}
+                  {expandedIndex === idx && study.sections && (
+                    <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6 pt-4">
+                      {study.sections.map((section, sectionIdx) => (
+                        <div key={sectionIdx} className="space-y-2">
+                          <h4 className="text-base sm:text-lg font-bold text-foreground">{section.title}</h4>
+                          
+                          {section.content && (
+                            <p className="text-sm sm:text-base text-foreground leading-relaxed text-justify whitespace-pre-wrap">
+                              {section.content}
+                            </p>
+                          )}
+                          
+                          {section.bullets && (
+                            <ul className="list-disc list-inside space-y-1 text-sm sm:text-base text-foreground">
+                              {section.bullets.map((bullet, bulletIdx) => (
+                                <li key={bulletIdx}>{bullet}</li>
+                              ))}
+                            </ul>
+                          )}
+                          
+                          {section.subsections && (
+                            <div className="ml-4 space-y-3">
+                              {section.subsections.map((subsection, subIdx) => (
+                                <div key={subIdx} className="space-y-1">
+                                  <h5 className="text-sm sm:text-base font-semibold text-foreground">{subsection.title}</h5>
+                                  <p className="text-sm sm:text-base text-foreground leading-relaxed text-justify">
+                                    {subsection.content}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
 
-                      {/* Role & Approach Section */}
-                      <div className="space-y-2">
-                        <h4 className="text-base sm:text-lg font-bold text-foreground">Role & Approach</h4>
-                        <p className="text-sm sm:text-base text-foreground leading-relaxed text-justify">
-                          As the Product Manager for the in-meeting experience, I owned both live-call quality and post-meeting outcomes. The first priority was fixing transcription accuracy. I partnered closely with Media and AI teams to redesign speaker detection using noise cancellation and decibel-based filters, improving speaker attribution across varied environments—from quiet home offices to noisy conference rooms.
-                        </p>
-                        <p className="text-sm sm:text-base text-foreground leading-relaxed text-justify">
-                          Once accuracy reached production-ready benchmarks, I led the redesign of the post-meeting experience into a unified Meeting Recap. This consolidated recordings, transcripts, AI-generated summaries, action items, and participant details into a single structured view. Role-based access controls were added to help hosts manage sensitive content.
-                        </p>
-                      </div>
-
-                      {/* Outcome Section */}
-                      <div className="space-y-2">
-                        <h4 className="text-base sm:text-lg font-bold text-foreground">Outcome</h4>
-                        <ul className="list-disc list-inside space-y-1 text-sm sm:text-base text-foreground">
-                          <li>40% increase in post-meeting re-engagement after rollout</li>
-                          <li>Enterprise users adopted the recap as their single source of truth</li>
-                          <li>Shifted meetings from passive archives to actionable decision-tracking tools</li>
-                        </ul>
-                      </div>
-
-                      {/* Show Less Button - At the end */}
+                      {/* Show Less Button */}
                       <button
                         onClick={() => setExpandedIndex(null)}
                         className="mt-3 px-4 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
