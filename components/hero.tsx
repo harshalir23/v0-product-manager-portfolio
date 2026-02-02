@@ -22,40 +22,48 @@ export default function Hero() {
           <div className="flex gap-4 sm:gap-8">
             <button
               onClick={() => scrollToSection("home")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 ${
+              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative ${
+                activeNav === "home" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+              } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "home"
-                  ? "bg-primary/15 text-foreground font-bold"
-                  : "text-muted-foreground hover:text-foreground hover:bg-primary/8"
+                  ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
+                  : "after:w-0 after:bg-gradient-to-r after:from-primary/50 after:to-secondary/50 hover:after:w-full"
               }`}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("timeline")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 ${
+              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative ${
+                activeNav === "timeline" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+              } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "timeline"
-                  ? "bg-primary/15 text-foreground font-bold"
-                  : "text-muted-foreground hover:text-foreground hover:bg-primary/8"
+                  ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
+                  : "after:w-0 after:bg-gradient-to-r after:from-primary/50 after:to-secondary/50 hover:after:w-full"
               }`}
             >
               Timeline
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 ${
+              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative ${
+                activeNav === "portfolio" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+              } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "portfolio"
-                  ? "bg-primary/15 text-foreground font-bold"
-                  : "text-muted-foreground hover:text-foreground hover:bg-primary/8"
+                  ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
+                  : "after:w-0 after:bg-gradient-to-r after:from-primary/50 after:to-secondary/50 hover:after:w-full"
               }`}
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 ${
+              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative ${
+                activeNav === "contact" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+              } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "contact"
-                  ? "bg-primary/15 text-foreground font-bold"
-                  : "text-muted-foreground hover:text-foreground hover:bg-primary/8"
+                  ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
+                  : "after:w-0 after:bg-gradient-to-r after:from-primary/50 after:to-secondary/50 hover:after:w-full"
               }`}
             >
               Contact
