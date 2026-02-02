@@ -22,32 +22,40 @@ export default function Hero() {
           <div className="flex gap-4 sm:gap-8">
             <button
               onClick={() => scrollToSection("home")}
-              className={`text-xs sm:text-sm font-medium transition-colors ${
-                activeNav === "home" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              className={`text-xs sm:text-sm font-medium transition-all duration-300 px-3 py-1.5 rounded-full ${
+                activeNav === "home"
+                  ? "font-bold text-foreground bg-primary/10 border border-primary/30"
+                  : "text-muted-foreground hover:text-foreground hover:bg-primary/5 border border-transparent"
               }`}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("timeline")}
-              className={`text-xs sm:text-sm font-medium transition-colors ${
-                activeNav === "timeline" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              className={`text-xs sm:text-sm font-medium transition-all duration-300 px-3 py-1.5 rounded-full ${
+                activeNav === "timeline"
+                  ? "font-bold text-foreground bg-primary/10 border border-primary/30"
+                  : "text-muted-foreground hover:text-foreground hover:bg-primary/5 border border-transparent"
               }`}
             >
               Timeline
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className={`text-xs sm:text-sm font-medium transition-colors ${
-                activeNav === "portfolio" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              className={`text-xs sm:text-sm font-medium transition-all duration-300 px-3 py-1.5 rounded-full ${
+                activeNav === "portfolio"
+                  ? "font-bold text-foreground bg-primary/10 border border-primary/30"
+                  : "text-muted-foreground hover:text-foreground hover:bg-primary/5 border border-transparent"
               }`}
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className={`text-xs sm:text-sm font-medium transition-colors ${
-                activeNav === "contact" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              className={`text-xs sm:text-sm font-medium transition-all duration-300 px-3 py-1.5 rounded-full ${
+                activeNav === "contact"
+                  ? "font-bold text-foreground bg-primary/10 border border-primary/30"
+                  : "text-muted-foreground hover:text-foreground hover:bg-primary/5 border border-transparent"
               }`}
             >
               Contact
