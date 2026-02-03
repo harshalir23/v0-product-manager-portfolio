@@ -16,16 +16,15 @@ export default function Hero() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "timeline", "portfolio", "contact"]
-      const scrollPosition = window.scrollY + 100 // Offset for sticky nav
+      const scrollPosition = window.scrollY + 200 // Offset for sticky nav
 
-      for (const sectionId of sections) {
+      // Start from the last section and work backwards for better bottom detection
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sectionId = sections[i]
         const element = document.getElementById(sectionId)
         if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
+          const { offsetTop } = element
+          if (scrollPosition >= offsetTop) {
             setActiveNav(sectionId)
             break
           }
@@ -34,6 +33,8 @@ export default function Hero() {
     }
 
     window.addEventListener("scroll", handleScroll)
+    // Call on mount to set initial active section
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
