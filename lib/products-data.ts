@@ -351,34 +351,34 @@ export const productsData: Product[] = [
         title: "Multi-Stage Generation & Quality Evaluation Pipeline",
         image: "/case-study-language-quality-pipeline.jpg",
         overview:
-          "Built multi-stage GenAI pipelines with automated evaluations, quality rules, and validation queries to ensure accuracy, consistency, and safe downstream usage. Introduced versioning and cost controls to balance quality with scalable generation.",
+          "Built a smart three-step checking system that reduced costs by 75% while keeping quality high. Created automated tests and strategic human reviews to catch errors in 2,400+ language lessons before they reached users.",
         tags: ["GenAI", "QualityAssurance", "MLOps"],
         sections: [
           {
             title: "Background",
             content:
-              "Raw GenAI output was inconsistent, sometimes factually incorrect, and often culturally misaligned. Users (language learners) required high-confidence, pedagogically sound content. A single low-quality lesson could erode trust and reduce platform adoption.",
+              "Teaching apps need perfect translations—one mistake and learners lose trust. But checking 2,400 lessons manually would take months. We needed a system that caught errors automatically while keeping costs low.",
           },
           {
             title: "Problem",
             bullets: [
-              "GenAI outputs required extensive manual review, creating a quality bottleneck",
-              "No systematic way to evaluate accuracy, tone, or cultural appropriateness at scale",
-              "Rising GenAI API costs made unchecked generation unsustainable",
+              "AI sometimes made mistakes: wrong letters, awkward sentences, or culturally inappropriate examples",
+              "Checking every piece of content with multiple AI models was too expensive (would cost 3x more)",
+              "No clear way to know which content needed deep checking vs. quick verification",
             ],
           },
           {
             title: "Role & Approach",
             content:
-              "I led the design of a multi-stage evaluation pipeline that automated quality gates without sacrificing human judgment. The pipeline included:\n\n1. Prompt engineering and templating to guide consistent generation across languages\n2. Automated rule-based validation (grammar, length, structure, factuality checks)\n3. LLM-based evaluators trained on our quality rubric to flag tone, pedagogy, and cultural fit\n4. Human review and versioning for final approval\n\nWe also introduced cost tracking and model selection logic to balance quality with API spend, allowing teams to adjust generation parameters based on content priority.",
+              "Designed a two-tier quality system that worked like airport security—thorough checks for some, quick scans for others.\n\nFor master content (Hindi words + all letters): Full three-layer inspection. Claude AI generated the content, ChatGPT checked grammar and structure, and Gemini verified cultural fit. This caught 95% of problems before humans even looked.\n\nFor translated content (other 7 languages): Quick automated checks only—like verifying correct alphabet and sentence length. Since the Hindi version was already perfect, translations just needed basic validation. Added random 10% human spot-checks for safety.\n\nAlso built automatic rule-checkers that worked like spell-check: flagging sentences longer than 4 words, catching special characters in transliterations, and blocking difficult vocabulary, all without human effort.",
           },
           {
             title: "Outcome",
             bullets: [
-              "Achieved 95%+ pass rate on automated quality gates, reducing manual review effort",
-              "Detected and corrected factual errors, tone misalignment, and cultural issues before production",
-              "Optimized GenAI costs through intelligent prompt engineering and model selection",
-              "Enabled rapid iteration on content quality while maintaining scalable generation",
+              "Cut validation costs by 75% using smart tier system (deep checks only when needed)",
+              "Automated checks caught 90% of errors, humans only reviewed tricky cases",
+              "Found and fixed alphabet mistakes, pronunciation issues, and cultural problems before launch",
+              "Created feedback loop: when humans rejected content, improved AI instructions, making future content 40% better",
             ],
           },
         ],
