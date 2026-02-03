@@ -16,7 +16,7 @@ export default function Hero() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "timeline", "portfolio", "contact"]
-      const scrollPosition = window.scrollY + 200 // Offset for sticky nav
+      const scrollPosition = window.scrollY + window.innerHeight / 3 // Section must be in top third of viewport
 
       // Start from the last section and work backwards for better bottom detection
       for (let i = sections.length - 1; i >= 0; i--) {
