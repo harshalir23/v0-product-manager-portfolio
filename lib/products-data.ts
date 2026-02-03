@@ -297,4 +297,92 @@ export const productsData: Product[] = [
       },
     ],
   },
+  {
+    id: "language-learning",
+    title: "Language Learning Module",
+    subtitle: "GenAI-Powered Multilingual Learning Platform",
+    overview:
+      "Built a GenAI-powered data platform to generate, validate, and serve multilingual language-learning content within a consumer product. The platform enabled scalable creation and delivery of structured learning units across languages, with strong quality controls and cost-aware generation.",
+    roles: [
+      "Designed language-agnostic content data models and APIs",
+      "Led end-to-end platform architecture for content generation and serving",
+      "Built multi-stage GenAI pipelines with automated quality evaluations",
+      "Introduced versioning and cost controls for scalable generation",
+    ],
+    caseStudies: [
+      {
+        id: "language-learning-content-platform",
+        title: "GenAI Content Data Platform",
+        image: "/case-study-language-content-platform.jpg",
+        overview:
+          "Designed and shipped a language-agnostic content platform that powered end-to-end generation and serving of learning content. Defined core data models and APIs to scale 2,400+ structured learning units reliably across 8 languages.",
+        tags: ["GenAI", "ContentPlatform", "LanguageLearning"],
+        sections: [
+          {
+            title: "Background",
+            content:
+              "The consumer product needed to scale language-learning content from one language to eight while maintaining quality and consistency. Manual content creation was expensive and slow, making GenAI a necessary lever for rapid scaling at reasonable cost.",
+          },
+          {
+            title: "Problem",
+            bullets: [
+              "Manual content creation couldn't scale to 8 languages while maintaining consistency and quality",
+              "Lack of standardized data models made it difficult to generate, validate, and serve content reliably across languages",
+              "No mechanism to track content versions or manage language-specific variations",
+            ],
+          },
+          {
+            title: "Role & Approach",
+            content:
+              "I led the design of a language-agnostic content data platform from first principles. Working closely with content, language, and GenAI teams, we defined core data structures for learning units that abstracted language-specific complexity.\n\nWe designed a structured generation pipeline where each learning unit (lesson, exercise, example) was defined once in a language-neutral format, then templated for targeted generation in each language. This ensured consistency while allowing language-specific nuance.",
+          },
+          {
+            title: "Outcome",
+            bullets: [
+              "Scaled from 300 content units to 2,400+ units across 8 languages",
+              "Established reliable, reusable data models for content generation and serving",
+              "Reduced time-to-launch for new languages from months to weeks",
+            ],
+          },
+        ],
+      },
+      {
+        id: "language-learning-quality-pipeline",
+        title: "Multi-Stage Generation & Quality Evaluation Pipeline",
+        image: "/case-study-language-quality-pipeline.jpg",
+        overview:
+          "Built multi-stage GenAI pipelines with automated evaluations, quality rules, and validation queries to ensure accuracy, consistency, and safe downstream usage. Introduced versioning and cost controls to balance quality with scalable generation.",
+        tags: ["GenAI", "QualityAssurance", "MLOps"],
+        sections: [
+          {
+            title: "Background",
+            content:
+              "Raw GenAI output was inconsistent, sometimes factually incorrect, and often culturally misaligned. Users (language learners) required high-confidence, pedagogically sound content. A single low-quality lesson could erode trust and reduce platform adoption.",
+          },
+          {
+            title: "Problem",
+            bullets: [
+              "GenAI outputs required extensive manual review, creating a quality bottleneck",
+              "No systematic way to evaluate accuracy, tone, or cultural appropriateness at scale",
+              "Rising GenAI API costs made unchecked generation unsustainable",
+            ],
+          },
+          {
+            title: "Role & Approach",
+            content:
+              "I led the design of a multi-stage evaluation pipeline that automated quality gates without sacrificing human judgment. The pipeline included:\n\n1. Prompt engineering and templating to guide consistent generation across languages\n2. Automated rule-based validation (grammar, length, structure, factuality checks)\n3. LLM-based evaluators trained on our quality rubric to flag tone, pedagogy, and cultural fit\n4. Human review and versioning for final approval\n\nWe also introduced cost tracking and model selection logic to balance quality with API spend, allowing teams to adjust generation parameters based on content priority.",
+          },
+          {
+            title: "Outcome",
+            bullets: [
+              "Achieved 95%+ pass rate on automated quality gates, reducing manual review effort",
+              "Detected and corrected factual errors, tone misalignment, and cultural issues before production",
+              "Optimized GenAI costs through intelligent prompt engineering and model selection",
+              "Enabled rapid iteration on content quality while maintaining scalable generation",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ]
