@@ -357,7 +357,7 @@ export const productsData: Product[] = [
           {
             title: "Background",
             content:
-              "Teaching apps need perfect translations—one mistake and learners lose trust. But checking 2,400 lessons manually would take months. We needed a system that caught errors automatically while keeping costs low.",
+              "Teaching apps need perfect translations, one mistake and learners lose trust. But checking 2,400 lessons manually would take months. We needed a system that caught errors automatically while keeping costs low.",
           },
           {
             title: "Problem",
@@ -370,7 +370,7 @@ export const productsData: Product[] = [
           {
             title: "Role & Approach",
             content:
-              "Designed a two-tier quality system that worked like airport security—thorough checks for some, quick scans for others.\n\nFor master content (Hindi words + all letters): Full three-layer inspection. Claude AI generated the content, ChatGPT checked grammar and structure, and Gemini verified cultural fit. This caught 95% of problems before humans even looked.\n\nFor translated content (other 7 languages): Quick automated checks only—like verifying correct alphabet and sentence length. Since the Hindi version was already perfect, translations just needed basic validation. Added random 10% human spot-checks for safety.\n\nAlso built automatic rule-checkers that worked like spell-check: flagging sentences longer than 4 words, catching special characters in transliterations, and blocking difficult vocabulary, all without human effort.",
+              "Designed a two-tier quality system that worked like airport security—thorough checks for some, quick scans for others.\n\nFor master content (Hindi words + all letters): Full three-layer inspection. Claude AI generated the content, ChatGPT checked grammar and structure, and Gemini verified cultural fit. This caught 95% of problems before humans even looked.\n\nFor translated content (other 7 languages): Quick automated checks only—like verifying correct alphabet and sentence length. But why? The Hindi version was already perfect, so translations just needed basic validation. Added random 10% human spot-checks for safety.\n\nAlso built automatic rule-checkers that worked like spell-check: flagging sentences longer than 4 words, catching special characters in transliterations, and blocking difficult vocabulary, all without human effort.",
           },
           {
             title: "Outcome",
