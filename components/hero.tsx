@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Hero() {
   const [activeNav, setActiveNav] = useState("home")
@@ -12,6 +12,30 @@ export default function Hero() {
       setActiveNav(sectionId)
     }
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "timeline", "portfolio", "contact"]
+      const scrollPosition = window.scrollY + 100 // Offset for sticky nav
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveNav(sectionId)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <>
