@@ -66,12 +66,12 @@ export function CaseStudyCard({
             {/* Text Content: 60% width (3 cols out of 5) */}
             <div className="md:col-span-3 p-4 sm:p-6 md:p-8 flex flex-col justify-between space-y-3">
               {/* Title */}
-              <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-foreground line-clamp-2">
+              <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-foreground">
                 {caseStudy.title}
               </h3>
 
               {/* One-line Outcome/Summary */}
-              <p className="text-sm sm:text-base text-foreground leading-relaxed line-clamp-2">
+              <p className="text-sm sm:text-base text-foreground leading-relaxed">
                 {caseStudy.overview}
               </p>
 
