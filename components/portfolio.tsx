@@ -8,6 +8,20 @@ import { ProductDetail } from "./product-detail"
 export default function Portfolio() {
   const [expandedProductId, setExpandedProductId] = useState<string | null>(null)
 
+  const handleViewWork = (productId: string) => {
+    setExpandedProductId(productId)
+    
+    // Scroll to first case study after expansion
+    setTimeout(() => {
+      const firstCaseStudy = document.querySelector(
+        `[data-product="${productId}"] [data-case-study-card]`
+      )
+      if (firstCaseStudy) {
+        firstCaseStudy.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
+    }, 100)
+  }
+
   return (
     <section id="portfolio" className="py-12 sm:py-16 md:py-32 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -22,7 +36,7 @@ export default function Portfolio() {
 
         <div className="space-y-0">
           {productsData.map((product) => (
-            <div key={product.id}>
+            <div key={product.id} data-product={product.id}>
               <ProductCard
                 title={product.title}
                 subtitle={product.subtitle}
@@ -30,9 +44,9 @@ export default function Portfolio() {
                 roles={product.roles}
                 isExpanded={expandedProductId === product.id}
                 onToggle={() =>
-                  setExpandedProductId(
-                    expandedProductId === product.id ? null : product.id
-                  )
+                  expandedProductId === product.id
+                    ? setExpandedProductId(null)
+                    : handleViewWork(product.id)
                 }
               />
 
