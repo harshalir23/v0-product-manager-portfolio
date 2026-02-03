@@ -23,7 +23,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection("home")}
               className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
-                activeNav === "home" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+                activeNav === "home" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-[#ece5d8]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "home"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
@@ -35,7 +35,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection("timeline")}
               className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
-                activeNav === "timeline" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+                activeNav === "timeline" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-[#ece5d8]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "timeline"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
@@ -47,7 +47,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection("portfolio")}
               className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
-                activeNav === "portfolio" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+                activeNav === "portfolio" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-[#ece5d8]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "portfolio"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
@@ -59,7 +59,7 @@ export default function Hero() {
             <button
               onClick={() => scrollToSection("contact")}
               className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
-                activeNav === "contact" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground"
+                activeNav === "contact" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-[#ece5d8]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "contact"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
