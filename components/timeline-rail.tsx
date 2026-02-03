@@ -10,6 +10,7 @@ interface TimelineRailProps {
 export function TimelineRail({ itemCount, activeIndex }: TimelineRailProps) {
   const railRef = useRef<HTMLDivElement>(null)
   const [fillPercentage, setFillPercentage] = useState(0)
+  const [cardPositions, setCardPositions] = useState<number[]>([])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,13 +27,10 @@ export function TimelineRail({ itemCount, activeIndex }: TimelineRailProps) {
       let percentage = 0
 
       if (railBottom < viewportCenter) {
-        // Rail is completely above center
         percentage = 100
       } else if (railTop > viewportCenter) {
-        // Rail is completely below center
         percentage = 0
       } else {
-        // Rail is intersecting with center
         const distFromTop = viewportCenter - railTop
         percentage = (distFromTop / railHeight) * 100
       }
@@ -40,14 +38,46 @@ export function TimelineRail({ itemCount, activeIndex }: TimelineRailProps) {
       setFillPercentage(Math.min(100, Math.max(0, percentage)))
     }
 
+    // Calculate card positions based on their actual DOM positions
+    const updateCardPositions = () => {
+      if (!railRef.current) return
+
+      const cards = document.querySelectorAll("[data-case-study-card]")
+      const railRect = railRef.current.getBoundingClientRect()
+      const railTop = railRect.top
+      const railHeight = railRef.current.offsetHeight
+
+      const positions = Array.from(cards).map((card) => {
+        const cardRect = (card as HTMLElement).getBoundingClientRect()
+        const cardCenter = cardRect.top + cardRect.height / 2
+        const positionRelativeToRail = cardCenter - railTop
+        const percentagePosition = (positionRelativeToRail / railHeight) * 100
+        return Math.max(0, Math.min(100, percentagePosition))
+      })
+
+      setCardPositions(positions)
+    }
+
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // Initial call
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener("resize", updateCardPositions)
+    
+    // Initial calculations with a slight delay to ensure DOM is ready
+    const timer = setTimeout(updateCardPositions, 100)
+    handleScroll()
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("resize", updateCardPositions)
+      clearTimeout(timer)
+    }
   }, [])
 
-  const nodePositions = Array.from({ length: itemCount }, (_, i) => {
-    return (i / (itemCount - 1 || 1)) * 100
-  })
+  // Use calculated card positions or fallback to evenly distributed positions
+  const nodePositions = cardPositions.length > 0 
+    ? cardPositions 
+    : Array.from({ length: itemCount }, (_, i) => {
+        return (i / (itemCount - 1 || 1)) * 100
+      })
 
   return (
     <div

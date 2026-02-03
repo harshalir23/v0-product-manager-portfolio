@@ -40,14 +40,11 @@ export function CaseStudyCard({
   }, [])
 
   return (
-    <div
-      ref={cardRef}
-      className={`transition-all duration-500 ${
-        isVisible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-5"
-      }`}
-    >
+      <div
+        ref={cardRef}
+        className="bg-background border border-border rounded-lg overflow-hidden"
+        data-case-study-card
+      >
       <div className="bg-background border border-border rounded-lg overflow-hidden">
         {/* Collapsed State */}
         {!isExpanded && (
