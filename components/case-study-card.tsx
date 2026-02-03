@@ -92,10 +92,10 @@ export function CaseStudyCard({
 
         {/* Expanded State */}
         {isExpanded && (
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
-            {/* Image: 40% width (2 cols out of 5) */}
-            <div className="md:col-span-2">
-              <div className="relative w-full aspect-square rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden bg-muted h-full">
+          <div className="flex flex-col md:flex-row gap-0">
+            {/* Image: Fixed 40% width, expands to full content height */}
+            <div className="w-full md:w-2/5 flex-shrink-0">
+              <div className="relative w-full aspect-square rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden bg-muted h-full sticky top-0">
                 <img
                   src={caseStudy.image || "/placeholder.svg"}
                   alt={caseStudy.title}
@@ -104,8 +104,8 @@ export function CaseStudyCard({
               </div>
             </div>
 
-            {/* Content: 60% width (3 cols out of 5) */}
-            <div className="md:col-span-3 p-4 sm:p-6 md:p-8 space-y-6">
+            {/* Content: 60% width, flows alongside image */}
+            <div className="w-full md:w-3/5 p-4 sm:p-6 md:p-8 space-y-6">
               {/* Title */}
               <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-foreground">
                 {caseStudy.title}
