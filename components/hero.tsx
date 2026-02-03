@@ -19,7 +19,7 @@ export default function Hero() {
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
         <div className="px-6 sm:px-12 md:px-16 lg:px-24 py-3 sm:py-4 flex items-center justify-between">
           <h1 className="text-2xl sm:text-3xl font-serif font-bold tracking-tight">Harshali Rane</h1>
-          <div className="flex gap-2 sm:gap-4">
+          <div className="flex gap-1 sm:gap-2">
             <button
               onClick={() => scrollToSection("home")}
               className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
