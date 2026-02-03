@@ -124,7 +124,7 @@ export default function Hero() {
             </div>
             <div className="relative order-1 md:order-2 flex justify-center md:justify-end px-4 md:px-6">
               <div className="w-96 md:w-[28rem] h-auto">
-                <div className="aspect-square bg-gradient-to-br from-muted to-card rounded-xl sm:rounded-2xl overflow-hidden">
+                <div className="aspect-[3/4] bg-gradient-to-br from-muted to-card rounded-xl sm:rounded-2xl overflow-hidden">
                   <img
                     src="/professional-product-manager-portrait.jpg"
                     alt="Harshali Rane"
