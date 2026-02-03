@@ -315,33 +315,33 @@ export const productsData: Product[] = [
         title: "GenAI Content Data Platform",
         image: "/case-study-language-content-platform.jpg",
         overview:
-          "Designed and shipped a language-agnostic content platform that powered end-to-end generation and serving of learning content. Defined core data models and APIs to scale 2,400+ structured learning units reliably across 8 languages.",
+          "Designed and shipped a cost-optimized content generation platform that reduced production costs by 85% while scaling multilingual learning content. Built a master-translation architecture and defined reusable data models to generate 2,400+ structured learning units across 8 Indian languages.",
         tags: ["GenAI", "ContentPlatform", "LanguageLearning"],
         sections: [
           {
             title: "Background",
             content:
-              "The consumer product needed to scale language-learning content from one language to eight while maintaining quality and consistency. Manual content creation was expensive and slow, making GenAI a necessary lever for rapid scaling at reasonable cost.",
+              "The language-learning app needed to scale from Hindi to 8 Indian languages rapidly. Traditional approaches, generating fresh content for each language would cost $50+ per batch and take months. We needed a faster, cheaper path without sacrificing quality.",
           },
           {
             title: "Problem",
             bullets: [
-              "Manual content creation couldn't scale to 8 languages while maintaining consistency and quality",
-              "Lack of standardized data models made it difficult to generate, validate, and serve content reliably across languages",
-              "No mechanism to track content versions or manage language-specific variations",
+              "Generating unique content for each language was prohibitively expensive (8x cost multiplier)",
+              "Lack of content reusability meant reinventing the wheel for every new language",
+              "No cost-efficient way to maintain consistency across translations while preserving cultural nuance",
             ],
           },
           {
             title: "Role & Approach",
             content:
-              "I led the design of a language-agnostic content data platform from first principles. Working closely with content, language, and GenAI teams, we defined core data structures for learning units that abstracted language-specific complexity.\n\nWe designed a structured generation pipeline where each learning unit (lesson, exercise, example) was defined once in a language-neutral format, then templated for targeted generation in each language. This ensured consistency while allowing language-specific nuance.",
+              "I architected a master-translation content pipeline that flipped the economics. Instead of generating 200 words × 8 languages independently, we generated once in Hindi (master), then used cost-efficient translation prompts to derive the other 7 languages, cutting GenAI costs from $48 to $6 per batch (87% reduction).\n\nWorking with content and engineering teams, I designed language-agnostic data models that separated concepts from language-specific realizations. This allowed one content unit (e.g., \"Apple\") to spawn 8 translations while maintaining structural consistency (sentence patterns, difficulty level, word count).",
           },
           {
             title: "Outcome",
             bullets: [
-              "Scaled from 300 content units to 2,400+ units across 8 languages",
-              "Established reliable, reusable data models for content generation and serving",
-              "Reduced time-to-launch for new languages from months to weeks",
+              "Reduced content generation costs by 85% through master-translation architecture",
+              "Scaled from 300 Hindi units to 2,400+ units across 8 languages in weeks, not months",
+              "Established reusable content lineage system tracking master-derivative relationships for quality control",
             ],
           },
         ],
