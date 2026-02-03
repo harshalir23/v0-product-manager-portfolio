@@ -22,8 +22,8 @@ export default function Hero() {
           <div className="flex gap-2 sm:gap-4">
             <button
               onClick={() => scrollToSection("home")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative rounded-md ${
-                activeNav === "home" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-gradient-to-br hover:from-primary/60 hover:to-secondary/60"
+              className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
+                activeNav === "home" ? "text-foreground font-bold" : "text-muted-foreground hover:text-[#f5f1ed] hover:bg-gradient-to-t hover:from-primary hover:to-[#f5f1ed]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "home"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
@@ -34,8 +34,8 @@ export default function Hero() {
             </button>
             <button
               onClick={() => scrollToSection("timeline")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative rounded-md ${
-                activeNav === "timeline" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-gradient-to-br hover:from-primary/60 hover:to-secondary/60"
+              className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
+                activeNav === "timeline" ? "text-foreground font-bold" : "text-muted-foreground hover:text-[#f5f1ed] hover:bg-gradient-to-t hover:from-primary hover:to-[#f5f1ed]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "timeline"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
@@ -46,8 +46,8 @@ export default function Hero() {
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative rounded-md ${
-                activeNav === "portfolio" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-gradient-to-br hover:from-primary/60 hover:to-secondary/60"
+              className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
+                activeNav === "portfolio" ? "text-foreground font-bold" : "text-muted-foreground hover:text-[#f5f1ed] hover:bg-gradient-to-t hover:from-primary hover:to-[#f5f1ed]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "portfolio"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
@@ -58,8 +58,8 @@ export default function Hero() {
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className={`text-xs sm:text-sm font-medium px-3 py-1.5 transition-all duration-300 relative rounded-md ${
-                activeNav === "contact" ? "text-foreground font-bold" : "text-muted-foreground hover:text-foreground hover:bg-gradient-to-br hover:from-primary/60 hover:to-secondary/60"
+              className={`text-xs sm:text-sm font-medium px-4 py-2 transition-all duration-300 relative rounded-md ${
+                activeNav === "contact" ? "text-foreground font-bold" : "text-muted-foreground hover:text-[#f5f1ed] hover:bg-gradient-to-t hover:from-primary hover:to-[#f5f1ed]"
               } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-all after:duration-300 ${
                 activeNav === "contact"
                   ? "after:w-full after:bg-gradient-to-r after:from-primary after:to-secondary"
