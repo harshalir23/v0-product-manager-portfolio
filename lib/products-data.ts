@@ -45,7 +45,7 @@ export const productsData: Product[] = [
         title: "AI-Powered Meeting Recap",
         image: "/case-study-jiomeet-recap.jpg",
         overview:
-          "Transformed scattered recordings, transcripts, and chat into a unified, AI-powered Meeting Recap.",
+          "Fixed transcription accuracy and launched a unified AI meeting recap combining recordings, summaries, and actions, driving a 40% increase in post-meeting engagement and making recaps the primary decision-tracking tool for enterprise teams.",
         tags: ["AI", "Collaboration", "EnterpriseSaaS"],
         sections: [
           {
@@ -81,7 +81,7 @@ export const productsData: Product[] = [
         title: "AI-Powered Video Summary",
         image: "/case-study-jiomeet-video.jpg",
         overview:
-          "Developed an AI-driven Video Summary feature that converts lengthy meetings into highlight-based recaps.",
+          "Built AI-driven video summaries that condensed long meetings into short, topic-wise highlight reels, reducing average catch-up time by over 60% and significantly increasing post-meeting re-engagement without replaying full recordings.",
         tags: ["VideoAI", "EnterpriseSaaS"],
         sections: [
           {
@@ -114,7 +114,7 @@ export const productsData: Product[] = [
         title: "Meeting Moderation Suite",
         image: "/case-study-jiomeet-moderation.jpg",
         overview:
-          "Built an intelligent Meeting Moderation Suite that transforms enterprise meeting controls into policy-compliant, context-aware workflows.",
+          "Introduced set of host and moderation features designed to reduce manual effort and improve consistency in enterprise meetings, improving policy compliance, and scaling meeting governance across diverse enterprise use cases.",
         tags: ["Enterprise", "Compliance"],
         sections: [
           {
@@ -147,7 +147,7 @@ export const productsData: Product[] = [
         title: "Calendar Enhancements with State-First Experience",
         image: "/case-study-jiomeet-calendar.jpg",
         overview:
-          "Reimagined the calendar experience with state-first design, providing real-time visibility into meeting states.",
+          "Redesigned the calendar around real-time meeting states, improving join flows, reducing conflicts, and enabling seamless cross-device transitions through visible live indicators and in-calendar actions during ongoing meetings.",
         tags: ["UX", "StateManagement", "Enterprise"],
         sections: [
           {
@@ -180,7 +180,7 @@ export const productsData: Product[] = [
         title: "Adaptive Network Quality for the Indian Ecosystem",
         image: "/case-study-jiomeet-network.jpg",
         overview:
-          "Built adaptive network management system with audio-first philosophy, ensuring uninterrupted meeting participation.",
+          "Built an adaptive network management system for unstable networks, eliminating false low-network alerts, enabling graceful degradation to audio only mode, and improving call stability and trust for users across highly variable Indian connectivity conditions.",
         tags: ["NetworkQuality", "India", "Resilience"],
         sections: [
           {
@@ -231,7 +231,7 @@ export const productsData: Product[] = [
         title: "Optimized Live Streaming for cPaaS",
         image: "/case-study-cpaas-livestreaming.jpg",
         overview:
-          "Accelerated revenue growth by delivering a live streaming solution within 3 weeks for a major edtech client.",
+          "Redesigned the cPaaS streaming architecture into a single HLS pipeline, cutting redundant encoding, lowering infrastructure costs, improving recording reliability, and increasing post-class consumption for revenue-critical live sessions.",
         tags: ["cPaaS", "LiveStreaming", "EdTech"],
         sections: [
           {
@@ -267,7 +267,7 @@ export const productsData: Product[] = [
         title: "Revamped Admin Portal - Advanced Analytics",
         image: "/case-study-cpaas-admin.jpg",
         overview:
-          "Redesigned the developer platform for onboarding and analytics, enabling self-serve discovery and monitoring.",
+          "Revamped admin portal with advanced analytics, stream health monitoring, and cost tracking, enabling self-serve customer diagnostics and reducing support burden for enterprise integrations.",
         tags: ["cPaaS", "Analytics", "DeveloperPlatform"],
         sections: [
           {
