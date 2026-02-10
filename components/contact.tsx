@@ -27,9 +27,9 @@ export default function Contact() {
     },
     {
       label: "GitHub",
-      value: "@harshalirane",
+      value: "@harshalir23",
       icon: Github,
-      href: "https://github.com/harshalirane",
+      href: "https://github.com/harshalir23",
       color: "text-primary",
     },
   ]
