@@ -22,7 +22,7 @@ export default function Contact() {
       label: "Resume",
       value: "Download PDF",
       icon: Download,
-      href: "#",
+      href: "https://harshali-rane.vercel.app/resume.pdf",
       color: "text-accent",
     },
     {
