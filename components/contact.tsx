@@ -22,7 +22,7 @@ export default function Contact() {
       label: "Resume",
       value: "View PDF",
       icon: Download,
-      href: "/resume",
+      href: "https://drive.google.com/file/d/1uWeNEWtjUQ7E7UvjiomZqIFGmKAY5SH4/view?usp=sharing",
       color: "text-accent",
     },
     {
