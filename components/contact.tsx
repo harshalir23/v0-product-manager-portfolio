@@ -22,14 +22,14 @@ export default function Contact() {
       label: "Resume",
       value: "Download PDF",
       icon: Download,
-      href: "#",
+      href: "/resume.pdf",
       color: "text-accent",
     },
     {
       label: "GitHub",
-      value: "@harshalirane",
+      value: "@harshalir23",
       icon: Github,
-      href: "https://github.com/harshalirane",
+      href: "https://github.com/harshalir23",
       color: "text-primary",
     },
   ]
