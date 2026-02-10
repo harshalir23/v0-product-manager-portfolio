@@ -7,24 +7,11 @@
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+A sleek, modern portfolio website showcasing my professional work and technical expertise. Built using v0's AI-powered design system and Next.js, this project demonstrates clean UI/UX principles, responsive design, and performance optimization.
 
 ## Deployment
 
 Your project is live at:
 
-**[https://vercel.com/harshalirane27-7643s-projects/v0-product-manager-portfolio](https://vercel.com/harshalirane27-7643s-projects/v0-product-manager-portfolio)**
+**[(https://harshali-rane.vercel.app/)](https://vercel.com/harshalirane27-7643s-projects/v0-product-manager-portfolio)**
 
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/jfTVTkNDTGs](https://v0.app/chat/jfTVTkNDTGs)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
