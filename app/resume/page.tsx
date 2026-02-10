@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Document, Page, pdfjs } from "react-pdf"
 import { ChevronLeft, ChevronRight, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -12,6 +12,20 @@ export default function ResumePage() {
   const [numPages, setNumPages] = useState<number | null>(null)
   const [pageNumber, setPageNumber] = useState(1)
   const [isLoading, setIsLoading] = useState(true)
+  const [pageWidth, setPageWidth] = useState(800)
+
+  useEffect(() => {
+    // Set page width based on window size
+    const calculateWidth = () => {
+      if (typeof window !== "undefined") {
+        setPageWidth(Math.min(800, window.innerWidth - 32))
+      }
+    }
+    
+    calculateWidth()
+    window.addEventListener("resize", calculateWidth)
+    return () => window.removeEventListener("resize", calculateWidth)
+  }, [])
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages)
@@ -65,7 +79,7 @@ export default function ResumePage() {
                 pageNumber={pageNumber}
                 renderTextLayer={true}
                 renderAnnotationLayer={true}
-                width={Math.min(800, window?.innerWidth - 32)}
+                width={pageWidth}
               />
             </Document>
           </div>
