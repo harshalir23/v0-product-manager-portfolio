@@ -20,9 +20,9 @@ export default function Contact() {
     },
     {
       label: "Resume",
-      value: "Download PDF",
+      value: "View PDF",
       icon: Download,
-      href: "/resume.pdf",
+      href: "/resume",
       color: "text-accent",
     },
     {
